@@ -1,0 +1,158 @@
+@font-face {
+    font-family: "letra";
+    src: url(fonts/underwhe.ttf);
+}
+body{
+    font-size: 2em;
+    font-family: "letra";
+    background: linear-gradient(217deg, #F3E600, #000000 80.71%),
+            linear-gradient(127deg, #04DAF6, #04DAF6 70.71%),
+            linear-gradient(336deg, rgba(98, 218, 223, 0.8), rgba(0, 0, 204, 0) 70.71%);
+            height: 100vh;
+}
+#barra{
+    font-size: 3em;
+}
+input{
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 20px;
+    color:white;
+}
+table{
+    margin:auto;
+    margin-top: 250px;
+    text-align: center;
+    padding: 15px;
+    border: 6px black double;
+}
+.modo{
+    margin-top: 100px;
+    text-align: center;
+}
+.objeto{
+    width: 100px;
+    height: 100px;
+    background:linear-gradient(to bottom,#04DAF6,white);
+    border-radius: 20%;
+    margin-bottom: 10px;
+    z-index: -1;
+    text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px #fff,
+      0 0 82px #fff,
+      0 0 92px #fff,
+      0 0 102px #000000,
+      0 0 151px #fff;
+      box-shadow: 0 0 .2rem #fff,
+              0 0 .2rem #fff,
+              0 0 2rem #000000,
+              0 0 0.8rem #000000,
+              0 0 2.8rem #fff,
+              inset 0 0 1.3rem #fff; 
+    
+}
+.container{
+    position: absolute;
+    top:60px;
+    left:60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.container2{
+    position: absolute;
+    top:60px;
+    right:60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+button{
+    background: none;
+    padding: 20px;
+    border-radius: 15%;
+}
+button:hover{
+    color: #fff;
+    text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px #000000,
+      0 0 82px #000000,
+      0 0 92px #000000,
+      0 0 102px #000000,
+      0 0 151px #000000;
+      box-shadow: 0 0 .2rem #fff,
+              0 0 .2rem #fff,
+              0 0 2rem #000000,
+              0 0 0.8rem #000000,
+              0 0 2.8rem #000000,
+              inset 0 0 1.3rem #000000; 
+  }
+/*NEON*/
+.neonText {
+    color: #fff;
+    text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px #04DAF6,
+      0 0 82px #04DAF6,
+      0 0 92px #04DAF6,
+      0 0 102px #04DAF6,
+      0 0 151px #04DAF6;
+  }
+    
+ 
+  
+  h1, h2 {
+    text-align: center;
+    font-weight: 400;
+  }
+    
+  TABLE {
+    animation: pulsate 1.5s infinite alternate;  
+    border: 0.2rem solid #fff;
+    border-radius: 2rem;
+    padding: 0.4em;
+    box-shadow: 0 0 .2rem #fff,
+              0 0 .2rem #fff,
+              0 0 2rem #04DAF6,
+              0 0 0.8rem #04DAF6,
+              0 0 2.8rem #04DAF6,
+              inset 0 0 1.3rem #04DAF6; 
+  }
+  
+  @keyframes pulsate {
+      
+    100% {
+  
+        text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px #04DAF6,
+        0 0 80px #04DAF6,
+        0 0 90px #04DAF6,
+        0 0 100px #04DAF6,
+        0 0 150px #04DAF6;
+    
+    }
+    
+    0% {
+  
+      text-shadow:
+      0 0 2px #fff,
+      0 0 4px #fff,
+      0 0 6px #fff,
+      0 0 10px #04DAF6,
+      0 0 45px #04DAF6,
+      0 0 55px #04DAF6,
+      0 0 70px #04DAF6,
+      0 0 80px #04DAF6;
+  
+  }
+}

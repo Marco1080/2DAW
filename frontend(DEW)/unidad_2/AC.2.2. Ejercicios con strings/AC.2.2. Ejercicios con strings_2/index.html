@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="javascript/main.js"></script>
+    <title>Ejercicio 2</title>
+</head>
+<body>
+    <form onsubmit="return false">
+        <table>
+            <tr>
+                <td>MOSTRAR TODOS LOS USUARIOS</td>
+                <td><input type="submit" onclick="outputClientes()"></td>
+            </tr>
+            <tr>
+                <td>USUARIOS DE UNA PROVINCIA</td>
+                <td><input type="text" id="provincia"></td>
+                <td><input type="submit" onclick="outputProvincia(document.getElementById('provincia').value)"></td>
+            </tr>
+            <tr>
+                <td>USUARIOS CON UNA CUOTA MAYOR A</td>
+                <td><input type="number" id="cuota"></td>
+                <td><input type="submit" onclick="outputCuota(document.getElementById('cuota').value)"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

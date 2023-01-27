@@ -1,0 +1,89 @@
+@font-face {
+    font-family: "letra1";
+    src: url(../fonts/DAGGERSQUARE\ OBLIQUE.otf);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    font-family: "letra1";
+}
+video{
+    z-index: -1;
+    position: fixed;
+    top: 0;
+}
+.content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+body{
+    background-color: rgb(20, 17, 17);
+    color:rgb(230, 145, 34);
+    font-size: 1.5em;
+}
+.ventana{
+    background-color: rgb(20, 17, 17);
+    margin: 50px auto;
+    text-align: center;
+}
+
+table{
+    margin: 20vh auto;
+    width: 30%;
+    border: 1px white solid;
+    border-radius: 5%;
+    padding: 15px;
+}
+tr{
+    width: 50%;
+    text-align: center;
+    border: 1px white solid;
+}
+input{
+    height: 50px;
+    width: 100%;
+    opacity: 0.4;
+}
+#peso{
+    font-size: 3.0em;
+}
+#genero{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.hover-center-1{
+    opacity: 0.8;
+}
+.salir{
+    position: fixed;
+    top: 25px;
+    left: 25px;
+    font-size: 3em;
+}
+.siguiente{
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    font-size: 3em;
+}
+.anterior{
+    position: fixed;
+    bottom: 25px;
+    left: 25px;
+    font-size: 3em;
+}

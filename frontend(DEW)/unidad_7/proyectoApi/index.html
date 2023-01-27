@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script defer src="javascript/scripts.js"></script>
+    
+    <title>rickandmorty</title>
+</head>
+<body>
+    <h1 class="title">RICK AND MORTY</h1>
+    <script>
+        const myTitle = document.querySelector(".title");
+        myTitle.innerHTML = myTitle.textContent.replace(/\S/g, "<span>$&</span>");
+        anime.timeline({
+            loop:false
+        })
+        .add({
+            targets: '.title span',
+            translateY:[-600, 0],
+            scale: [10,1],
+            opacity: [0,1],
+            easing: "easeOutExpo",
+            duration:1200,
+            delay: anime.stagger(100)
+        });
+    </script>
+    
+    
+        <div class="menu">
+            <img src="media/Rick-And-Morty-Wallpaper-No-Background.png" alt="Logo de la empresa">
+            <div class="options">
+                <button style="margin-right: 10px;" id="characterButton">PERSONAJES</button>
+                <button style="margin-right: 10px;" id="episodeButton">EPISODIOS</button>
+                <button>OTROS</button>
+            </div>
+        </div>
+        <div class="container"></div>
+        <div class="bottom-bar">
+            <button class="prev-button">Previous</button>
+            <button class="next-button">Next</button>
+        </div>
+</body>
+</html>

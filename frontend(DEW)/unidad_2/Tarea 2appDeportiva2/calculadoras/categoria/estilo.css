@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    color: #f7f1f1;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+table{
+    margin:auto;
+    width: 60%;
+    background-color: rgba(68, 212, 157, 0.4);
+}
+table, tr, td{
+    border: 3px black solid;
+}
+#calc{
+    text-align: center;
+    font-size: 1.8em;
+}
+.rango{
+    text-align: center;
+}
+input{
+    background-color: #c5999c;
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src="scripts.js"></script>
+</head>
+<body>
+    <table>
+        <tr><td class="animate__animated animate__zoomIn">Nombre</td><td><input type="text" id="name" onfocus="vaciar(this)" onblur="verificarEntrada(this)"></td></tr>
+        <tr><td class="animate__animated animate__zoomIn">Apellidos</td><td><input type="text" id="surname" onfocus="vaciar(this)" onblur="verificarEntrada2(this)"></td></tr>
+        <tr><td colspan="2" class="animate__animated animate__zoomIn"><button onclick="calculo()">CONFIRMAR</button></td></tr>
+        <tr><td class="animate__animated animate__zoomIn">Tamaño:</td><td id="resultado"></td></tr>
+        <tr><td class="animate__animated animate__zoomIn">Minusculas:</td><td id="minus"></td></tr>
+        <tr><td class="animate__animated animate__zoomIn">Mayusculas:</td><td id="mayus"></td></tr>
+        <tr><td class="animate__animated animate__zoomIn">Iniciales:</td><td id="ini"></td></tr>
+    </table>
+</body>
+</html>

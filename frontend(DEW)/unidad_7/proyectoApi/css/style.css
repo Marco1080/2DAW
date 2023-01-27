@@ -1,0 +1,77 @@
+@font-face {
+  font-family: "letraSerie";
+  src: url("../fonts/Rick-and-Morty-Font/get_schwifty.ttf");
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-image: url("../media/936813.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+h1 {
+  font-family: "letraSerie";
+  font-size: 10em;
+  text-align: center;
+  position: relative;
+}
+
+.title {
+  position: relative;
+}
+
+.title span {
+  position: relative;
+  display: inline-block;
+  color: #5CAD4A;
+  text-shadow: 0 0 7px #0D0D0D, 0 0 10px #0D0D0D, 0 0 21px #0D0D0D, 0 0 42px #5CAD4A, 0 0 82px #5CAD4A, 0 0 92px #5CAD4A, 0 0 102px #5CAD4A, 0 0 151px #5CAD4A;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.menu {
+  text-align: center;
+  margin: auto;
+}
+
+.menu img {
+  max-width: 300px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  width: 500px;
+  height: 580px;
+  border: 2px solid black;
+  margin: 10px;
+}
+
+.bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #208D45;
+  display: flex;
+  justify-content: center;
+}
+
+.prev-button, .next-button {
+  width: 100px;
+  height: 40px;
+  font-size: 16px;
+}

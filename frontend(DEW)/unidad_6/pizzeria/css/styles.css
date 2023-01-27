@@ -1,0 +1,111 @@
+@font-face {
+    font-family: "letra";
+    src: url(../fonts/CHEESEPIZZA.ttf);
+}
+body{
+    font-family: "letra";
+    font-size: 2em;
+    background-image: url(../media/fondo1.webp);
+}
+h1{
+    font-size: 2.5em;
+    font-weight: bold;
+}
+li{
+    list-style: none;
+}
+.navbar{
+    background-color: rgb(225, 108, 108) !important;
+}
+
+/* CSS */
+.button-53 {
+  margin: auto ;
+  margin-top: 5%;
+  background-color: #f74741;
+  border: 0 solid #E5E7EB;
+  box-sizing: border-box;
+  color: #f4eded;
+  display: flex;
+  font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 1.75rem;
+  padding: .75rem 1.65rem;
+  position: relative;
+  text-align: center;
+  text-decoration: none #000000 solid;
+  text-decoration-thickness: auto;
+  width: 100%;
+  max-width: 460px;
+  position: relative;
+  cursor: pointer;
+  transform: rotate(-2deg);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-53:focus {
+  outline: 0;
+}
+
+.button-53:after {
+  content: '';
+  position: absolute;
+  border: 3px solid #461010;
+  border-radius: 4px;
+  bottom: 4px;
+  left: 4px;
+  width: calc(100% - 1px);
+  height: calc(100% - 1px);
+}
+
+.button-53:hover:after {
+  bottom: 2px;
+  left: 2px;
+}
+
+@media (min-width: 768px) {
+  .button-53 {
+    padding: .75rem 3rem;
+    font-size: 1.25rem;
+  }
+}
+.estiloPizza{
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+}
+.estilos{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.listadoIngredientes{
+  display: flex;
+  flex-wrap: wrap;
+}
+.ingredientes{
+  border-right: 2px solid black;
+  padding-right: 10px;
+}
+.carousel{
+  border: 4px double black;
+  text-align: center;
+  margin: auto;
+  justify-content: center;
+  width: 80%;
+  height: 100%;
+}
+#carouselExampleIndicators{
+  width: 80%;
+}
+.sr-only{
+  color: black;
+}
+.carousel-item img{
+  width:100%;
+  height: 450px;
+}

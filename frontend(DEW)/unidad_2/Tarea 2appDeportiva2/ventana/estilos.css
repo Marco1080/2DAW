@@ -1,0 +1,16 @@
+body{
+    text-align: center;
+    font-weight: bold;
+    font-size: 2em;
+    animation: anime 2s linear forwards infinite;
+    background: none;
+    transition: 0.8s;
+}
+@keyframes anime{
+    0%, 20%, 40%, 60%, 80%, 100%{
+        text-shadow: 1px 2px 3px rgb(83, 74, 74);
+    }
+    5%, 25%, 50%, 70%, 90%{
+        text-shadow: 3px 4px 6px rgba(19, 39, 221, 0.966);
+    }
+}

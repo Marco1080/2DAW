@@ -1,0 +1,60 @@
+/* FUNCIÓN PARA LIMPIAR DATOS*/
+
+	function limpiar($data){
+                $data = trim($data);
+                $data = htmlentities($data);
+                $data = htmlspecialchars($data);
+                $data = stripslashes($data);
+                return $data;
+	}
+
+/* CONEXIÓN SERVIDOR PHP MY ADMIN */
+
+	$conn = new PDO("mysql:host=$servername", $username, $psswd);
+	$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+/* CONEXIÓN BASE DE DATOS */
+
+	$conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+/* REALIZAR CONSULTAS */
+
+	->query
+	->fetch (PDO::FETCH_BOTH /*FETCH_OBJ*/)
+
+/* SUBIR IMAGEN */
+
+	*****IMPORTANTE INSERTAR EN FORM DEL HTML*****
+		<form method="post" action="insertarProducto.php" enctype="multipart/form-data">	
+
+
+	if($_FILES['imagen']['type'] == "image/jpeg" || $_FILES['imagen']['type'] == "image/gif" || $_FILES['imagen']['type'] == "image/png") {
+  		$rutatemporal = $_FILES['imagen']['tmp_name'];
+  		$nombrefoto = $_FILES['imagen']['name'];
+  		$rutadestino = "../photo/$nombrefoto";
+
+  		move_uploaded_file($rutatemporal,$rutadestino);
+	}
+
+/* UNLINK IMAGEN CARPETA */
+
+	unlink($nombreimagen);
+
+/* REDIRECCIONAR */
+
+	header("location: ejemplo.php");
+	header("refresh:1;url=ejemplo.php"); 
+
+/* FORMULARIO Y PHP EN MISMA PÁGINA */
+
+	<form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
+
+	if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+	
+	}
+
+/* ENCRIPTAR CONTRASEÑA */
+
+	SHA2('ejemplo', 256)
+	hash('sha256', ejemplo);

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <script defer src="scripts.js"></script>
+    <title>IMC</title>
+</head>
+<body>
+    <table>
+        <tr><td colspan="2" id="calc">CALCULADORA IMC</td></tr>
+        <tr>
+            <td>Peso</td>
+            <td><input type="number" id="weight"></td>
+        </tr>
+        <tr>
+            <td>Altura</td>
+            <td><input type="number" id="height"></td>
+        </tr>
+        <tr>
+            <td>Composición corporal</td>
+            <td class="rango">INDICE MASA CORPORAL</td>
+        </tr>
+        <tr id="severa">
+            <td>Delgadez severa</td>
+            <td  class="rango"><16.00</td>
+        </tr>
+        <tr id="moderada">
+            <td>Infrapeso (delgadez moderada)</td>
+            <td class="rango">16.00 – 16.99</td>
+        </tr>
+        <tr id="aceptable">
+            <td>Infrapeso (delgadez aceptable)</td>
+            <td class="rango">17.00 - 18.49</td>
+        </tr>
+        <tr id="normal">
+            <td>Peso normal</td>
+            <td class="rango">18.50 - 24.99</td>
+        </tr>
+        <tr id="sobrepeso">
+            <td>Sobrepeso</td>
+            <td class="rango">25.00 - 29.99</td>
+        </tr>
+        <tr id="obeso1">
+            <td>Obeso (Tipo I)</td>
+            <td class="rango">30.00 - 34.99</td>
+        </tr>
+        <tr id="obeso2">
+            <td>Obeso (Tipo II)</td>
+            <td class="rango">35.00 - 40.00</td>
+        </tr>
+        <tr id="obeso3">
+            <td>Obeso (Tipo III)</td>
+            <td class="rango">>40.00</td>
+        </tr>
+    </table>
+</body>
+</html>
