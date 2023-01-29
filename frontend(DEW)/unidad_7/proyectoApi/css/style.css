@@ -51,27 +51,78 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  background-color: rgba(255, 255, 255, 0.4);
+  width: 80%;
+  margin: auto;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  border-radius: 8px;
 }
 
 .card {
-  width: 500px;
-  height: 580px;
-  border: 2px solid black;
+  width: 400px;
   margin: 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-weight: bold;
+}
+
+.card img {
+  width: 50%;
+  border-radius: 50%;
+  margin: auto;
 }
 
 .bottom-bar {
   position: fixed;
   bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: #208D45;
+  background-color: rgba(0, 0, 0, 0.7);
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 
 .prev-button, .next-button {
   width: 100px;
   height: 40px;
   font-size: 16px;
+}
+
+.myButton {
+  background-color: #44c767;
+  border-radius: 28px;
+  border: 1px solid #18ab29;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 17px;
+  text-shadow: 0px 1px 0px #2f6627;
+}
+
+.myButton:hover {
+  background-color: #5cbf2a;
+}
+
+.myButton:active {
+  position: relative;
+  top: 1px;
+}
+
+table, tr, td, th {
+  border: 2px solid black;
+}
+
+.characterCard {
+  width: 500px;
+  height: auto;
+  padding: 10px;
+  border: 3px solid #147d43;
+  background-color: #d4fce6;
+  top: 50%;
+  position: fixed;
+  left: 50%;
+  margin-top: -100px; /* Negative half of height. */
+  margin-left: -250px; /* Negative half of width. */
+  z-index: 1;
 }
