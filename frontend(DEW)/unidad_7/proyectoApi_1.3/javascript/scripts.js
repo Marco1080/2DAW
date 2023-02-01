@@ -40,7 +40,6 @@ function showCharacters() {
     removeCards();
     removeTable();
     for (let index = 0; index < 20; index++) {
-        //console.log(myData[currentPage].results[index].name);
         let card = document.createElement('div');
         card.classList.add('card');
         let image = document.createElement('img');
@@ -48,16 +47,14 @@ function showCharacters() {
         card.appendChild(image);
         let content = document.createTextNode(`${characterList[currentPage].results[index].name}`);
         card.appendChild(content);
-        
+        card.addEventListener("click",()=>{
+            characterList[currentPage].results[index].name
+            checkCharacter(characterList[currentPage].results[index].name);
+        });
         container.appendChild(card);
     }
 }
 
-
-
-
-
-//<-----------------------
 function removeCards() {
     let removeArray = document.querySelectorAll('.card');
     if(removeArray.length > 0) {
@@ -189,3 +186,44 @@ characterInput.addEventListener("input", ()=> {
         
     }
 });
+const favoritesButton = document.getElementById('favoriteButton').addEventListener("click",()=>{
+    
+});
+
+//COOKIES
+function setCookie(cname, cvalue, exdays) {
+    const d = new Date();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    let expires = "expires="+d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  }
+  
+  function getCookie(cname) {
+    let name = cname + "=";
+    let ca = document.cookie.split(';');
+    for(let i = 0; i < ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+  }
+let favoriteList = [];
+
+function checkCharacter(element) {
+    if(getCookie('character') != ''){
+        favoriteList = getCookie('character');
+        favoriteList += element+"-";
+        setCookie('character', favoriteList, 1000);
+        console.log(favoriteList);
+    }
+    else{
+        favoriteList += element+"-";
+        setCookie('character', favoriteList, 1000);
+    }
+    
+}
