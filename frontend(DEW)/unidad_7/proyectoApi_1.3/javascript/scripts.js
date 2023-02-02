@@ -1,3 +1,4 @@
+//abrir con go live para evitar errores con las cookies
 function getNumberDataPages() {
     return fetch('https://rickandmortyapi.com/api/character')
         .then((response) => response.json()
@@ -38,6 +39,8 @@ const container = document.getElementById("container");
 
 function showCharacters() {
     removeCards();
+    removeNoCharacterMessage();
+    removeImage();
     removeTable();
     for (let index = 0; index < 20; index++) {
         let card = document.createElement('div');
@@ -49,7 +52,7 @@ function showCharacters() {
         card.appendChild(content);
         card.addEventListener("click",()=>{
             characterList[currentPage].results[index].name
-            checkCharacter(characterList[currentPage].results[index].name);
+            checkCharacter(characterList[currentPage].results[index].image);
         });
         container.appendChild(card);
     }
@@ -57,6 +60,25 @@ function showCharacters() {
 
 function removeCards() {
     let removeArray = document.querySelectorAll('.card');
+    if(removeArray.length > 0) {
+        
+        removeArray.forEach(element => {
+            container.removeChild(element);
+        });
+    }
+}
+
+function removeImage() {
+    let removeArray = document.querySelectorAll('.favoriteCharacter');
+    if(removeArray.length > 0) {
+        removeArray.forEach(element => {
+            container.removeChild(element);
+        });
+    }
+}
+
+function removeNoCharacterMessage() {
+    let removeArray = document.querySelectorAll('.noCharacter');
     if(removeArray.length > 0) {
         removeArray.forEach(element => {
             container.removeChild(element);
@@ -99,6 +121,7 @@ function callPageButtons() {
 }
 const episodeButton = document.getElementById('episodeButton').addEventListener("click", ()=> {
     removeCards();
+    container.innerHTML= '';
     showEpisodes();
 });
 function showEpisodes() {
@@ -172,6 +195,7 @@ function removePageButtons() {
         container.removeChild(button);
     }
 }
+
 function searchFor() {
     console.log(characterList);
 }
@@ -180,14 +204,36 @@ characterInput.addEventListener("input", ()=> {
     for (let index = 0; index < characterList.length; index++) {
         characterList[index].results.forEach(element => {
             if(element.name.includes(`${characterInput.value}`)) {
-                container.innerHTML = element.name;
+                container.innerHTML = `<img src=${element.image}>`;
             }
         });
         
     }
 });
 const favoritesButton = document.getElementById('favoriteButton').addEventListener("click",()=>{
-    
+    container.innerHTML = '';
+    if(readCookieCharacter()!='') {
+
+
+        readCookieCharacter().map(myFunction)
+
+        function myFunction(num) {
+            container.innerHTML += `<img class='favoriteCharacter'src=${num}><br>`;
+        }
+
+
+        /* readCookieCharacter().forEach(element => {------------------------------------------------------
+            container.innerHTML += `<img class='favoriteCharacter'src=${element}><br>`;
+        }); */
+        container.innerHTML += `<button class='delete'>🗑️</button>`;
+        document.querySelector(".delete").addEventListener("click",()=>{
+            delete_cookie('character');
+            container.innerHTML = '<h2 class=noCharacter>No favorite characters yet ! <br>Click one character to add here</h2>';
+    });
+    }
+    else{
+        container.innerHTML = '<h2 class=noCharacter>No favorite characters yet ! <br>Click one character to add here</h2>';
+    }
 });
 
 //COOKIES
@@ -219,7 +265,7 @@ function checkCharacter(element) {
         favoriteList = getCookie('character');
         favoriteList += element+"-";
         setCookie('character', favoriteList, 1000);
-        console.log(favoriteList);
+        readCookieCharacter();
     }
     else{
         favoriteList += element+"-";
@@ -227,3 +273,15 @@ function checkCharacter(element) {
     }
     
 }
+function readCookieCharacter() {
+    let infoCookie = getCookie('character');
+    infoCookie = infoCookie.split('-');
+    infoCookie.pop();
+
+    return infoCookie;
+}
+
+var delete_cookie = function(name) {
+    document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+};
+//
